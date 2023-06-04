@@ -1,0 +1,7 @@
+javascript:
+const localStorageKey = "Sitecore.Pages.LocalXmCloudUrl"; 
+const localStorageEntry = localStorage.getItem(localStorageKey); 
+if(localStorage){
+    localStorage.removeItem(localStorageKey);
+    location.reload();
+};

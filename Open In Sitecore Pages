@@ -1,0 +1,13 @@
+javascript:
+var organization = "YOUR ORGANIZATION ID";
+var tenantName = "Your TENANT NAME";
+var site = "YOUR SITE NAME";
+
+var currentItem = window.document.querySelector('#__CurrentItem');
+var itemUrl= currentItem ? currentItem.value: window.document.querySelector('iframe').contentDocument.querySelector('#__CurrentItem').value;
+var scExItemUrl = new URL(itemUrl);
+var language = scExItemUrl.searchParams.get("lang");
+var version = scExItemUrl.searchParams.get("ver");
+var itemId = scExItemUrl.pathname.split('/').last().replace('{','').replace('}','');
+var pageUrl = "https://pages.sitecorecloud.io/composer/pages/components?organization=" + organization + "&tenantName=" + tenantName + "&sc_itemid="+ itemId+"&sc_lang=" + language +"&sc_site=" + site + "&sc_version=" + version;
+window.open(pageUrl);

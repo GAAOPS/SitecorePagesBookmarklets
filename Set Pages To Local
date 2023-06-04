@@ -1,0 +1,6 @@
+javascript:
+var localStorageKey = "Sitecore.Pages.LocalXmCloudUrl"; 
+var localXmCloudUrl = "https://xmcloudcm.localhost/"; 
+var localStorageEntry = localStorage.getItem(localStorageKey); 
+localStorage.setItem(localStorageKey, localXmCloudUrl); 
+location.reload();
